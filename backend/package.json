@@ -1,0 +1,20 @@
+{
+  "name": "gbp-guard-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "agent:daily": "node src/agent/run.js",
+    "agent:weekly": "node src/agent/run-weekly.js",
+    "agent:daily:local": "node src/agent/run.js",
+    "agent:weekly:local": "node src/agent/run-weekly.js"
+  },
+  "dependencies": {
+    "mongodb": "^7.4.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
