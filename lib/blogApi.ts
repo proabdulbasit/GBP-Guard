@@ -1,9 +1,8 @@
 // Next.js only exposes browser-safe variables prefixed with NEXT_PUBLIC_.
-// Keep localhost as a development fallback, but configure this explicitly in
-// Vercel/production so the browser never depends on a local backend.
+// Prefer NEXT_PUBLIC_BACKEND_API_URL; fall back to the live Render API.
 export const BACKEND_API_URL = (
   process.env.NEXT_PUBLIC_BACKEND_API_URL ||
-  (process.env.NODE_ENV === 'development' ? 'http://localhost:8000/api/v1' : '')
+  'https://gbp-guard.onrender.com/api/v1'
 ).replace(/\/$/, '')
 
 export interface WpMedia {

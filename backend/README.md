@@ -11,7 +11,7 @@ Deploy this directory as its own Node service.
 Configure the backend environment variables from `.env.example` in the hosting provider. Configure the frontend separately with:
 
 ```env
-NEXT_PUBLIC_BACKEND_API_URL=https://YOUR-BACKEND-HOST/api/v1
+NEXT_PUBLIC_BACKEND_API_URL=https://gbp-guard.onrender.com/api/v1
 ```
 
 After changing a Vercel environment variable, redeploy the frontend. Next.js embeds `NEXT_PUBLIC_*` values at build time.
