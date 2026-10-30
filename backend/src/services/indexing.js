@@ -1,4 +1,4 @@
-const PRODUCTION_HOST = 'gbp-guard.vercel.app';
+const PRODUCTION_HOST = 'gbp-guard.com';
 
 const resolveHost = () => {
   try {

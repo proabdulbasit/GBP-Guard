@@ -3,10 +3,9 @@ import { submitToIndexNow } from './indexing.js';
 
 /**
  * Public site URL used in sitemap <loc> entries.
- * Until a custom domain exists, this is the Vercel production URL.
- * When you buy a brand domain, set SITE_BASE_URL (or SITEMAP_SITE_URL) on Render to that domain.
+ * Prefer SITE_BASE_URL / SITEMAP_SITE_URL in env; default is the custom domain.
  */
-const PRODUCTION_SITE_URL = 'https://gbp-guard.vercel.app';
+const PRODUCTION_SITE_URL = 'https://gbp-guard.com';
 
 const resolveSitemapSiteUrl = () => {
   const raw = (process.env.SITEMAP_SITE_URL || process.env.SITE_BASE_URL || PRODUCTION_SITE_URL)
@@ -28,7 +27,6 @@ const resolveSitemapSiteUrl = () => {
     ) {
       return PRODUCTION_SITE_URL;
     }
-    // vercel.app is allowed while it is the live site; custom domains also pass through
     return `${parsed.protocol}//${parsed.host}`;
   } catch {
     return PRODUCTION_SITE_URL;

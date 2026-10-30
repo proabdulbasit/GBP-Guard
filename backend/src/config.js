@@ -37,7 +37,7 @@ export const config = {
   nodeEnv: process.env.NODE_ENV ?? 'development',
   isProduction: process.env.NODE_ENV === 'production',
   siteBaseUrl: (() => {
-    const fallback = 'https://gbp-guard.vercel.app';
+    const fallback = 'https://gbp-guard.com';
     const raw = (process.env.SITE_BASE_URL || fallback).trim().replace(/\/+$/, '');
     if (!raw) return fallback;
     if (/^https?:\/\//i.test(raw)) return raw;

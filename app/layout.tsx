@@ -1,11 +1,17 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { indexFollowRobots, SITE_URL } from '@/lib/site'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'GBP-Guard | Google Review Removal for Local Business',
   description: 'GBP-Guard helps local businesses remove unfair Google reviews with policy-led case building and expert support.',
   generator: 'v0.app',
+  robots: indexFollowRobots,
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: [
       {
