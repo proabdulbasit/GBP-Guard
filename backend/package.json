@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "node --watch src/index.js",
+    "start": "node init && node src/index.js",
+    "dev": "node init && node --watch src/index.js",
     "agent:daily": "node src/agent/run.js",
     "agent:weekly": "node src/agent/run-weekly.js",
     "agent:daily:local": "node src/agent/run.js",

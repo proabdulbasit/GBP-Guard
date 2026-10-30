@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   description: 'GBP-Guard helps local businesses remove unfair Google reviews with policy-led case building and expert support.',
   generator: 'v0.app',
   robots: indexFollowRobots,
+  verification: {
+    google: 'gyFc0GGkStQXJsFoDgFT92sB6XE44Ob82V5aQcWOm-o',
+  },
   alternates: {
     canonical: '/',
   },
